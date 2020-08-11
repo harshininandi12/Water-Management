@@ -1,0 +1,126 @@
+<body>
+      
+      
+    <div class="tank" data-toggle="tooltip" data-placement="top" title="pH is {{ph2}}">
+        <div class="bottom" *ngIf="ph2<=4 && ph2>=1; else moderate2"style="background-color: red;"></div>
+        <ng-template #moderate2>
+            <div class="bottom" *ngIf="ph2>4 && ph<7; else neutral2"style="background-color: Yellow" ></div>
+        </ng-template>
+        <ng-template #neutral2>
+            <div class="bottom" *ngIf="ph2==7; else basic2"style="background-color: green" ></div>
+          </ng-template>
+          <ng-template #basic2>
+              <div class="bottom" *ngIf="ph2>7 && ph2<=11; else morebasic2"style="background-color: blue" ></div>
+            </ng-template>
+            <ng-template #morebasic2>
+                <div class="bottom" style="background-color:purple" ></div>
+              </ng-template>
+        <div class="middle" *ngIf="ph2<=4 && ph2>=1; else moderate3"style="background-color: red;"></div>
+        <ng-template #moderate3>
+            <div class="middle" *ngIf="ph2>4 && ph2<7; else neutral3"style="background-color: Yellow" ></div>
+        </ng-template>
+        <ng-template #neutral3>
+            <div class="middle" *ngIf="ph2==7; else basic3"style="background-color: green" ></div>
+          </ng-template>
+          <ng-template #basic3>
+              <div class="middle" *ngIf="ph2>7 && ph2<=11; else morebasic3"style="background-color: blue" ></div>
+            </ng-template>
+            <ng-template #morebasic3>
+                <div class="middle" style="background-color:purple" ></div>
+              </ng-template>
+        <div class="top"></div>  
+    </div>
+    
+    <div class="tank1" data-toggle="tooltip" data-placement="top" title="pH is {{ph1}}">
+     
+        <div class="bottom" *ngIf="ph1<=4 && ph1>=1; else moderate"style="background-color: red;"></div>
+          <ng-template #moderate>
+              <div class="bottom" *ngIf="ph1>4 && ph<7; else neutral"style="background-color: Yellow" ></div>
+          </ng-template>
+          <ng-template #neutral>
+              <div class="bottom" *ngIf="ph1==7; else basic"style="background-color: green" ></div>
+            </ng-template>
+            <ng-template #basic>
+                <div class="bottom" *ngIf="ph1>7 && ph1<=11; else morebasic"style="background-color: blue" ></div>
+              </ng-template>
+              <ng-template #morebasic>
+                  <div class="bottom" style="background-color:purple" ></div>
+                </ng-template>
+          <div class="middle" *ngIf="ph1<=4 && ph1>=1; else moderate1"style="background-color: red;"></div>
+          <ng-template #moderate1>
+              <div class="middle" *ngIf="ph1>4 && ph1<7; else neutral1"style="background-color: Yellow" ></div>
+          </ng-template>
+          <ng-template #neutral1>
+              <div class="middle" *ngIf="ph1==7; else basic1"style="background-color: green" ></div>
+            </ng-template>
+            <ng-template #basic1>
+                <div class="middle" *ngIf="ph1>7 && ph1<=11; else morebasic1"style="background-color: blue" ></div>
+              </ng-template>
+              <ng-template #morebasic1>
+                  <div class="middle" style="background-color:purple" ></div>
+                </ng-template>
+       
+        <div class="top"></div>  
+       
+    </div>
+    <span class="name1"><font color="orange">Tank 1</font></span>
+    <span class="name2"><font color="orange">Tank 2</font></span>
+    <div class="rectangle" *ngIf="h1==h2; else leak" style="background-color: green;"></div>
+    <ng-template #leak>
+      <div class="rectangle" style="background-color:tomato;">
+      <img class = "padding2" src="assets/leak.png" height = "70px" width = "70px" >
+    </div>
+    </ng-template>
+   
+    </body>
+    <body>
+      
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <div class="bordered">
+      <h2><u> Legend </u> </h2>
+      <ul>
+        <li><b>PH (shown in tank)</b>
+        </li>
+        <br/>
+            <ul class="footer-nav" style="list-style-type:circle;">
+                <li> Highly Acidic:-</li>
+                <img class = "padding" style="margin:5px;" src="assets/red.png" width="60"
+                height="30">
+                
+                <li> Moderately Acidic:- <img class = "padding" style="margin:5px;" src="assets/yel.jpeg" width="60" height="30">
+        </li>
+                <li> Neutral:-<img style="margin:5px;" src="assets/gre.png" width="60"
+                  height="30">
+                            
+                </li>
+                <br/>
+                <br/>
+                <li> Moderately Basic:- <img class = "padding1" style="margin:5px;" style="margin:5px;" src="assets/blue.png" width="60"
+                  height="30">
+                            
+                            </li>
+                 <li>Highly Basic:- <img class = "padding1" style="margin:5px;" src="assets/purp.png"  width="60"
+                  height="30">
+                           
+                 </li>
+             </ul>
+             <br/>
+             <br/>
+             <br>
+             <li><b>Contamination</b></li>
+             <br/>
+              <li><b>Turbidity</b></li>
+               <li><b>Leakage (shown in pipe)</b><img style="margin:5px;" src="assets/leak.png" width="30" height="30" alt="waterdroplets"></li>
+           </ul>
+           </div>
+            </body>
+           

@@ -1,0 +1,37 @@
+<div class="row">
+    <div class="column" style="background-color:rgb(34, 21, 21);">
+        <img src="assets/reg.png" style="width:700px;height:625px;opacity: 6;">
+        </div>
+       <div class="column" style="background-color:#967bb6">
+              <h1>Sign Up</h1>
+                <p>Please fill in this form to create an account as Professinal.</p>
+                <hr>
+                <div class="page">
+                        <label class="field a-field a-field_a1">
+                          <input class="field__input a-field__input" placeholder="e.g. Harshini Nandi" name="studentName" [(ngModel)]="student.studentName"required>
+                          <span class="a-field__label-wrap">
+                            <span class="a-field__label">Full Name</span>
+                          </span>
+                        </label><br/>
+                        <label class="field a-field a-field_a2">
+                          <input class="field__input a-field__input" placeholder="e.g. Harshini99" name="studentNumber" [(ngModel)]="student.studentNumber" required>
+                          <span class="a-field__label-wrap">
+                            <span class="a-field__label">User Name</span>
+                          </span>
+                        </label><br/>    
+                        <label class="field a-field a-field_a3">
+                          <input class="field__input a-field__input" placeholder="Password" name="password" [(ngModel)]="student.password" required>
+                          <span class="a-field__label-wrap">
+                            <span class="a-field__label">Password</span>
+                          </span>
+                        </label><br/>
+                        <label class="field a-field a-field_a3">
+                                <input class="field__input a-field__input" placeholder="Password" required>
+                                <span class="a-field__label-wrap">
+                                  <span class="a-field__label">Password</span>
+                                </span>
+                              </label>
+                    </div><br/>
+                      <button (click)="showUser()" type="submit" class="signupbtn">Sign Up</button>   
+                  </div>
+</div>

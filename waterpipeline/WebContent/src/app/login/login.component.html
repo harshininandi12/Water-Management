@@ -1,0 +1,15 @@
+<img src="assets/water.jpg" style="width:1289px;height:645px;opacity: 6;">
+<div class="login-box">
+    
+    <h1>Login</h1>
+    <form #loginForm="ngForm" (ngSubmit)="validateUser(loginForm.value)" novalidate class="lock-form pull-left" action="index.html" method="post">
+    <p>Username</p>
+    <input type ="text" name ="userName"   placeholder="Enter Username" ngModel #userName="ngModel">
+    <p>Password</p>
+    <input type ="password" name ="password" placeholder="Enter Password" ngModel #password="ngModel">
+    <input type="submit" name ="submit" (click) = "func()" placeholder="Confirm Password" value="Login">
+    <a href="#">Forgot Password</a>
+    <hr>
+    <a style = "text-align:center; color: whitesmoke" href="register"><h1>Create Account</h1></a>
+</form>
+</div>
